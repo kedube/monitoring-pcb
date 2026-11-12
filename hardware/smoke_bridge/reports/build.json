@@ -1,0 +1,44 @@
+{
+ "spec": "/Users/katherine/Downloads/github/monitoring-pcb/hardware/smoke_bridge.json",
+ "name": "smoke_bridge",
+ "title": "Smoke/CO alarm Wi-Fi + Matter bridge (ESP32-C6, 120 VAC)",
+ "width": 64.0,
+ "height": 38.0,
+ "layers": 2,
+ "parts": 31,
+ "nets": 21,
+ "pads": 155,
+ "placement_failed": [],
+ "notes": [],
+ "spec_warnings": [
+  "J1: footprint smoke_bridge:Terminal_3P_5.08_L-N-IC does not match symbol's filters (TerminalBlock*:*) -- double-check the package",
+  "RV1: footprint Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm does not match symbol's filters (RV_* Varistor*) -- double-check the package",
+  "PS1: footprint smoke_bridge:HLK-PM01_IsolationBarrier does not match symbol's filters (Converter*ACDC*Hi?Link*HLK?PM*) -- double-check the package"
+ ],
+ "spec_notes": [
+  "power: U4 (AP2112K-3.3) 5V->3.3V at 150 mA dissipates 0.26 W; SOT-23 handles about 0.3 W",
+  "rail +3V3 carries about 150 mA",
+  "rail +5V carries about 151 mA"
+ ],
+ "power_nets": [
+  "GND",
+  "+5V",
+  "+3V3",
+  "HLK_5V",
+  "VBUS_IN",
+  "AC_LF",
+  "AC_N"
+ ],
+ "ground": "GND",
+ "planes": {},
+ "layer_choice": {
+  "layers": 2,
+  "auto": false,
+  "reasons": [
+   "chosen in the spec"
+  ]
+ },
+ "erc": 0,
+ "parity": 0,
+ "placement_issues": 0
+}

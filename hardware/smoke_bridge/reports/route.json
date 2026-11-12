@@ -1,0 +1,60 @@
+{
+ "seconds": 90,
+ "parallel": 1,
+ "attempts": [
+  {
+   "strategy": "signal-width power tracks, both layers free",
+   "unconnected": 2,
+   "bottom_mm": 140.0,
+   "seconds": 10
+  },
+  {
+   "strategy": "signal-width power tracks, bottom layer cost x4.5",
+   "unconnected": 2,
+   "bottom_mm": 140.0,
+   "seconds": 10
+  },
+  {
+   "strategy": "signal-width power tracks, bottom layer cost x3.0",
+   "unconnected": 2,
+   "bottom_mm": 140.0,
+   "seconds": 10
+  },
+  {
+   "strategy": "full-width power tracks, bottom layer cost x3.0",
+   "unconnected": 5,
+   "bottom_mm": 168.9,
+   "seconds": 11
+  },
+  {
+   "strategy": "signal-width power tracks, both layers free",
+   "unconnected": 2,
+   "bottom_mm": 140.0,
+   "seconds": 10
+  },
+  {
+   "strategy": "signal-width power tracks, bottom layer cost x4.5",
+   "unconnected": 2,
+   "bottom_mm": 140.0,
+   "seconds": 10
+  },
+  {
+   "strategy": "signal-width power tracks, bottom layer cost x3.0",
+   "unconnected": 2,
+   "bottom_mm": 140.0,
+   "seconds": 10
+  },
+  {
+   "strategy": "full-width power tracks, bottom layer cost x3.0",
+   "unconnected": 5,
+   "bottom_mm": 168.9,
+   "seconds": 11
+  }
+ ],
+ "chosen": "signal-width power tracks, both layers free",
+ "unconnected": 0,
+ "tracks": 391,
+ "vias": 20,
+ "bottom_mm": 140.0,
+ "drc_ok": true
+}

@@ -1,0 +1,73 @@
+{
+ "rows": [
+  {
+   "qty": 5,
+   "pcb": 2.0,
+   "assembly": 39.19,
+   "parts": 43.38,
+   "total": 84.57,
+   "each": 16.91
+  },
+  {
+   "qty": 10,
+   "pcb": 5.0,
+   "assembly": 40.38,
+   "parts": 86.76,
+   "total": 132.14,
+   "each": 13.21
+  },
+  {
+   "qty": 100,
+   "pcb": 6.08,
+   "assembly": 61.8,
+   "parts": 867.6,
+   "total": 935.48,
+   "each": 9.35
+  }
+ ],
+ "extended": [
+  "C165948",
+  "C20627095",
+  "C209903",
+  "C221895",
+  "C25718",
+  "C354901",
+  "C430602",
+  "C49072860",
+  "C51118",
+  "C7519"
+ ],
+ "unpriced": [],
+ "drivers": [
+  {
+   "refs": [
+    "U2"
+   ],
+   "lcsc": "C20627095",
+   "per_board": 4.19
+  },
+  {
+   "refs": [
+    "PS1"
+   ],
+   "lcsc": "C209903",
+   "per_board": 2.81
+  },
+  {
+   "refs": [
+    "SW1"
+   ],
+   "lcsc": "C221895",
+   "per_board": 0.36
+  }
+ ],
+ "as_of": "2026-11",
+ "currency": "USD",
+ "board": {
+  "width": 64.0,
+  "height": 38.0,
+  "layers": 2
+ },
+ "joints": 140,
+ "offline": false
+}

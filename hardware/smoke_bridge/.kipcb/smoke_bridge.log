@@ -1,0 +1,53 @@
+2026-11-11 18:49:09.791 INFO   Freerouting v2.4.1 (build-date: 2026-09-03)
+WARNING: Final field userProfileSettings in class app.freerouting.settings.GlobalSettings has been mutated reflectively by class com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$2 in unnamed module @481a15ff (file:/Users/katherine/.cache/kipcb/freerouting-2.4.1.jar)
+WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
+WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
+2026-11-11 18:49:11.041 INFO   New version available: v2.5.0
+2026-11-11 18:49:11.166 INFO   [F1EFD7\1117F8] Loading board file 'smoke_bridge.dsn'...
+2026-11-11 18:49:11.224 INFO   [F1EFD7\1117F8] Job 'F1EFD7\1117F8' started at 2026-11-11T23:49:11.224615Z.
+2026-11-11 18:49:11.304 INFO   [F1EFD7\1117F8] Fanout stage started on board 'f204c04cb0c625e4dc122cbffeab6a46' with 58 of 134 SMD pins needing fanout (76 already connected, 0 netless).
+2026-11-11 18:49:11.801 INFO   [F1EFD7\1117F8] Fanout pass #1 on board 'd1d7995b83ff2bc26113dc2919689f96' completed in 0.46 seconds with 39 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=100).
+2026-11-11 18:49:12.055 INFO   [F1EFD7\1117F8] Fanout pass #2 on board 'd1d7995b83ff2bc26113dc2919689f96' completed in 0.24 seconds with 38 SMD pins fanouted, 0 not routed, 0 insert errors, +0 extra vias (0 SMD pins still to check in pass, ripup costs=200).
+2026-11-11 18:49:12.072 INFO   [F1EFD7\1117F8] Fanout stage completed: started with 134 total SMD pins, completed in 0.74 seconds, escaped pins: 107/134 (79.9%), using 0.78 total CPU seconds, 6.46 GB total allocated, and 719.5 MB peak heap usage.
+2026-11-11 18:49:12.077 INFO   [F1EFD7\1117F8] Auto-routing stage started on board 'd1d7995b83ff2bc26113dc2919689f96' for 11 unrouted items.
+2026-11-11 18:49:12.368 INFO   [F1EFD7\1117F8] Auto-routing pass #1 on board 'd1d7995b83ff2bc26113dc2919689f96' was completed in 0.23 seconds with score 898.04 (10 unrouted and 2 violations), using 0.99 CPU seconds and the job allocated 9.33 GB of memory so far.
+2026-11-11 18:49:12.631 INFO   [F1EFD7\1117F8] Auto-routing pass #2 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.21 seconds with score 898.04 (10 unrouted and 2 violations), using 0.99 CPU seconds and the job allocated 9.33 GB of memory so far.
+2026-11-11 18:49:12.862 INFO   [F1EFD7\1117F8] Auto-routing pass #3 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.20 seconds with score 898.04 (10 unrouted and 2 violations), using 0.99 CPU seconds and the job allocated 9.33 GB of memory so far.
+2026-11-11 18:49:13.078 INFO   [F1EFD7\1117F8] Auto-routing pass #4 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.19 seconds with score 898.04 (10 unrouted and 2 violations), using 0.99 CPU seconds and the job allocated 9.33 GB of memory so far.
+2026-11-11 18:49:13.293 INFO   [F1EFD7\1117F8] Auto-routing pass #5 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.19 seconds with score 898.04 (10 unrouted and 2 violations), using 1.98 CPU seconds and the job allocated 30.88 GB of memory so far.
+2026-11-11 18:49:13.511 INFO   [F1EFD7\1117F8] Auto-routing pass #6 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.19 seconds with score 898.04 (10 unrouted and 2 violations), using 1.98 CPU seconds and the job allocated 30.88 GB of memory so far.
+2026-11-11 18:49:13.733 INFO   [F1EFD7\1117F8] Auto-routing pass #7 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.19 seconds with score 898.04 (10 unrouted and 2 violations), using 1.98 CPU seconds and the job allocated 30.88 GB of memory so far.
+2026-11-11 18:49:13.962 INFO   [F1EFD7\1117F8] Auto-routing pass #8 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.20 seconds with score 898.04 (10 unrouted and 2 violations), using 1.98 CPU seconds and the job allocated 30.88 GB of memory so far.
+2026-11-11 18:49:14.193 INFO   [F1EFD7\1117F8] Auto-routing pass #9 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.20 seconds with score 898.04 (10 unrouted and 2 violations), using 1.98 CPU seconds and the job allocated 30.88 GB of memory so far.
+2026-11-11 18:49:14.423 INFO   [F1EFD7\1117F8] Auto-routing pass #10 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.20 seconds with score 898.04 (10 unrouted and 2 violations), using 2.98 CPU seconds and the job allocated 52.18 GB of memory so far.
+2026-11-11 18:49:14.626 INFO   [F1EFD7\1117F8] Auto-routing pass #11 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 2.98 CPU seconds and the job allocated 52.18 GB of memory so far.
+2026-11-11 18:49:14.849 INFO   [F1EFD7\1117F8] Auto-routing pass #12 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 2.98 CPU seconds and the job allocated 52.18 GB of memory so far.
+2026-11-11 18:49:15.051 INFO   [F1EFD7\1117F8] Auto-routing pass #13 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 2.98 CPU seconds and the job allocated 52.18 GB of memory so far.
+2026-11-11 18:49:15.270 INFO   [F1EFD7\1117F8] Auto-routing pass #14 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.19 seconds with score 898.04 (10 unrouted and 2 violations), using 3.96 CPU seconds and the job allocated 75.15 GB of memory so far.
+2026-11-11 18:49:15.462 INFO   [F1EFD7\1117F8] Auto-routing pass #15 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 3.96 CPU seconds and the job allocated 75.15 GB of memory so far.
+2026-11-11 18:49:15.660 INFO   [F1EFD7\1117F8] Auto-routing pass #16 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 3.96 CPU seconds and the job allocated 75.15 GB of memory so far.
+2026-11-11 18:49:15.859 INFO   [F1EFD7\1117F8] Auto-routing pass #17 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 3.96 CPU seconds and the job allocated 75.15 GB of memory so far.
+2026-11-11 18:49:16.053 INFO   [F1EFD7\1117F8] Auto-routing pass #18 on board 'edaf7481be23c9432b2f5a7d27cd651d' was completed in 0.17 seconds with score 898.04 (10 unrouted and 2 violations), using 3.96 CPU seconds and the job allocated 75.15 GB of memory so far.
+2026-11-11 18:49:16.061 INFO   [F1EFD7\1117F8] The router's best score (898.04) has not improved by more than 0.5 points since pass #8. Stopping the auto-router after 18 passes (10 items still unconnected).
+The following connections could not be routed -- please review your design (e.g. check pad clearances, trace width rules, and available routing space):
+  Net '/BOOT' (1 unrouted connection):
+    - SW1-1@1  ->  U2-23
+  Net 'GND' (8 unrouted connections):
+    - U2-39  ->  U2-40
+    - U2-42  ->  U2-41
+    - U2-44  ->  U2-45
+    - U2-1  ->  U2-53
+    - U2-50  ->  U2-36
+    - U3-3  ->  C13-2
+    - J2-A1  ->  R3-2
+    - R4-2  ->  J2-A12
+  Net '/USB_DN' (1 unrouted connection):
+    - J2-B7  ->  U1-3
+2026-11-11 18:49:16.107 INFO   [F1EFD7\1117F8] Auto-routing stage completed: started with 13 unrouted nets, completed in 4.83 seconds, final score: 898.04 (10 unrouted and 2 violations), using 3.96 total CPU seconds, 75.15 GB total allocated, and 983.8 MB peak heap usage.
+2026-11-11 18:49:16.131 INFO   [F1EFD7\1117F8] Optimization stage started on board 'edaf7481be23c9432b2f5a7d27cd651d' with score 898.04 (10 unrouted and 2 violations).
+2026-11-11 18:49:16.296 INFO   [F1EFD7\1117F8] Optimizer pass #1 on board 'd19cabebd27948f31a5d86c498432f9a' was completed in 0.09 seconds with the score of 898.04 (10 unrouted and 2 violations).
+2026-11-11 18:49:16.318 INFO   [F1EFD7\1117F8] Stopping optimizer because the improvement in this pass (0.0000%) is below the threshold (1.00%).
+2026-11-11 18:49:16.341 INFO   [F1EFD7\1117F8] Optimization stage completed: started with score 898.04 (10 unrouted and 2 violations), completed in 0.19 seconds, final score: 898.04 (10 unrouted and 2 violations), using 0.19 total CPU seconds, 4.48 GB total allocated, and 1144.2 MB peak heap usage.
+2026-11-11 18:49:16.345 INFO   [F1EFD7\1117F8] Job 'F1EFD7\1117F8' finished with state: COMPLETED (elapsed: 5.12 seconds, finished at UTC: 2026-11-11T23:49:16.345408Z).
+2026-11-11 18:49:16.484 INFO   Saving output file '/Users/katherine/Downloads/github/monitoring-pcb/hardware/smoke_bridge/.kipcb/smoke_bridge.ses' (SES)...
+2026-11-11 18:49:16.487 INFO   Successfully saved output file '/Users/katherine/Downloads/github/monitoring-pcb/hardware/smoke_bridge/.kipcb/smoke_bridge.ses' (55359 bytes).

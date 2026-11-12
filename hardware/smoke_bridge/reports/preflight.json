@@ -1,0 +1,77 @@
+{
+ "items": [
+  {
+   "check": "classes",
+   "level": "PASS",
+   "message": "every net has one netclass",
+   "fix": null
+  },
+  {
+   "check": "pad reach",
+   "level": "PASS",
+   "message": "every pad is reachable at its net's track width",
+   "fix": null
+  },
+  {
+   "check": "fab limits",
+   "level": "PASS",
+   "message": "tracks, gaps, vias and drills within JLCPCB's standard limits",
+   "fix": null
+  },
+  {
+   "check": "edge",
+   "level": "PASS",
+   "message": "all pads at least 0.50 mm from the edge",
+   "fix": null
+  },
+  {
+   "check": "placement",
+   "level": "WARN",
+   "message": "U4.1 (VIN, net +5V): decoupling cap C14 is 2.9 mm pad-to-pad (aim for < 2.5 mm)",
+   "fix": "put it next to the pin: {\"place\": {\"near\": \"U1.<pin>\"}}, or spacing \"compact\""
+  },
+  {
+   "check": "layout",
+   "level": "PASS",
+   "message": "USB, crystal, regulator, sensor and RF placement rules all met",
+   "fix": null
+  },
+  {
+   "check": "crowding",
+   "level": "PASS",
+   "message": "parts use the board evenly",
+   "fix": null
+  },
+  {
+   "check": "escape",
+   "level": "WARN",
+   "message": "J2 top side: 100% blocked by PS1, R3, R4, U1, 14 pins must route out that way",
+   "fix": "spacing \"roomy\", fewer \"near\" hints on that side, or 4 layers"
+  },
+  {
+   "check": "density",
+   "level": "PASS",
+   "message": "3.8 connections/cm\u00b2 on 2 layers",
+   "fix": null
+  },
+  {
+   "check": "layout score",
+   "level": "PASS",
+   "message": "97/100 compared with real 2-layer boards",
+   "fix": null
+  }
+ ],
+ "features": {
+  "layers": 2,
+  "conn_density": 3.81,
+  "connections": 93,
+  "finest_pitch": 0.5,
+  "layout_score": 97,
+  "court_fill": 1.1,
+  "fine": 0.142,
+  "similar_fill_p50": 0.444,
+  "fill": 0.35,
+  "density_peak": 0.776,
+  "rc_orientation_share": 0.647
+ }
+}

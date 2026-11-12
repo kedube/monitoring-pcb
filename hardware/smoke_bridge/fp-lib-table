@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "smoke_bridge")(type "KiCad")(uri "${KIPRJMOD}/../lib/smoke_bridge.pretty")(options "")(descr ""))
+)

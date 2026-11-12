@@ -1,0 +1,87 @@
+[
+ {
+  "check": "decoupling",
+  "level": "PASS",
+  "message": "U2.3 (3V3, net +3V3): C10 1.8 mm pad-to-pad"
+ },
+ {
+  "check": "decoupling",
+  "level": "WARN",
+  "message": "U4.1 (VIN, net +5V): decoupling cap C14 is 2.9 mm pad-to-pad (aim for < 2.5 mm)"
+ },
+ {
+  "check": "ground plane",
+  "level": "WARN",
+  "message": "F.Cu pour covers 35% of the board, split into 4 islands"
+ },
+ {
+  "check": "ground plane",
+  "level": "FAIL",
+  "message": "B.Cu pour covers 43% of the board"
+ },
+ {
+  "check": "ground plane",
+  "level": "WARN",
+  "message": "140 mm of signal track on the bottom layer: each cut forces return currents around it; move routes to the top or use 4 layers"
+ },
+ {
+  "check": "stitching",
+  "level": "PASS",
+  "message": "17 ground vias (0.7 per cm\u00b2)"
+ },
+ {
+  "check": "noisy nets",
+  "level": "PASS",
+  "message": "USB_DN: 22 mm, 2 vias"
+ },
+ {
+  "check": "noisy nets",
+  "level": "WARN",
+  "message": "USB_DP: 23 mm, 3 vias -- 3 vias"
+ },
+ {
+  "check": "crosstalk",
+  "level": "PASS",
+  "message": "sensitive net IC_IN is clear of noisy traces"
+ },
+ {
+  "check": "crosstalk",
+  "level": "PASS",
+  "message": "sensitive net VBUS_IN is clear of noisy traces"
+ },
+ {
+  "check": "diff pair",
+  "level": "WARN",
+  "message": "USB_DP/USB_DN: 22.6 / 22.4 mm -- via count differs (3 vs 2)"
+ },
+ {
+  "check": "power width",
+  "level": "WARN",
+  "message": "+3V3 narrowest track 0.19 mm: thin supply traces add resistance and noise; widen where current flows"
+ },
+ {
+  "check": "power width",
+  "level": "WARN",
+  "message": "+5V narrowest track 0.25 mm: thin supply traces add resistance and noise; widen where current flows"
+ },
+ {
+  "check": "power width",
+  "level": "PASS",
+  "message": "AC_LF narrowest track 0.60 mm"
+ },
+ {
+  "check": "power width",
+  "level": "PASS",
+  "message": "AC_N narrowest track 0.60 mm"
+ },
+ {
+  "check": "power width",
+  "level": "WARN",
+  "message": "HLK_5V narrowest track 0.25 mm: thin supply traces add resistance and noise; widen where current flows"
+ },
+ {
+  "check": "power width",
+  "level": "WARN",
+  "message": "VBUS_IN narrowest track 0.19 mm: thin supply traces add resistance and noise; widen where current flows"
+ }
+]

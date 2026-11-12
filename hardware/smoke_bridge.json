@@ -1,0 +1,78 @@
+{
+  "name": "smoke_bridge", "title": "Smoke/CO alarm Wi-Fi + Matter bridge (ESP32-C6, 120 VAC)", "revision": "A",
+  "requirements": {
+    "function": "Listens to the interconnect wire of hardwired 120 V smoke/CO alarms (like the Zooz ZEN55) and reports alarms over Wi-Fi or Matter (Wi-Fi or Thread). Never drives the interconnect.",
+    "size": "as small as practical for an electrical box: slim board for a single-gang box or 4-inch round/octagon box",
+    "power": "120 VAC line via a sealed encapsulated AC-DC module (HLK-PM01, 5 V 3 W; designed to UL/CE, not UL-recognized) with T1.25A fuse (100 A breaking) + 470 V MOV; USB-C 5 V for bench programming only, diode-isolated from the line supply",
+    "io": "3-position 300 V screw terminal (L, N, interconnect) with wire entry on the left board edge; USB-C on the bottom edge; BOOT button; status LED",
+    "isolation": "5 mm no-copper barrier between the 120 V side and the low-voltage side; interconnect read through an optocoupler (LTV-817S); 120 V parts kept in fixed positions on the left",
+    "radio": "ESP32-C6-MINI-1U with an external MHF III / W.FL antenna (a PCB antenna inside a metal box works poorly)",
+    "noise": "none sensitive; 2 layers only, so no inner plane runs under 120 V copper",
+    "build": "assembled by JLCPCB"
+  },
+  "libraries": {"footprints": {"smoke_bridge": "./lib/smoke_bridge.pretty"}},
+  "board": {"width": 64, "height": 38, "layers": 2, "spacing": "compact"},
+  "power_nets": "GND +5V +3V3 HLK_5V VBUS_IN AC_LF AC_N",
+  "rails": {"HLK_5V": 5.0, "VBUS_IN": 5.0},
+  "net_classes": [
+    {"name": "MAINS", "track": 0.6, "clearance": 2.0, "nets": ["AC_L", "AC_LF", "AC_N", "IC_IN"]}
+  ],
+  "blocks": [
+    {"use": "ldo_ap2112_3v3", "connect": {"VIN": "+5V"}},
+    {"use": "led_indicator", "params": {"color": "Green", "resistor": "330"}, "connect": {"IN": "LED_STAT"}}
+  ],
+  "components": [
+    {"ref": "J1", "symbol": "Connector:Screw_Terminal_01x03", "footprint": "smoke_bridge:Terminal_3P_5.08_L-N-IC", "value": "120VAC L-N-IC", "lcsc": "C430602", "mpn": "DB128L-5.08-3P-BK-S", "group": "mains", "place": {"x": 5.42, "y": 20.83, "rot": 270}},
+    {"ref": "F1", "symbol": "Device:Fuse", "footprint": "Fuse:Fuse_Littelfuse_395Series", "value": "T1.25A 250V", "lcsc": "C354901", "mpn": "2010T1.25A250V", "fields": {"Breaking": "100A@250VAC"}, "group": "mains", "place": {"x": 4.0, "y": 13.6, "rot": 90}},
+    {"ref": "RV1", "symbol": "Device:Varistor", "footprint": "Capacitor_THT:C_Disc_D7.5mm_W5.0mm_P5.00mm", "value": "07D471K", "lcsc": "C49072860", "group": "mains", "place": {"x": 9.09, "y": 13.6, "rot": 90}},
+    {"ref": "PS1", "symbol": "Converter_ACDC:HLK-PM01", "footprint": "smoke_bridge:HLK-PM01_IsolationBarrier", "value": "HLK-PM01", "lcsc": "C209903", "group": "mains", "place": {"x": 16.13, "y": 9.03, "rot": 0}},
+    {"ref": "R1", "symbol": "Device:R", "footprint": "Resistor_SMD:R_2512_6332Metric", "value": "10k 1W", "lcsc": "C25718", "fields": {"Power": "1W", "Voltage": "200V"}, "group": "mains", "place": {"x": 16.2, "y": 31.6, "rot": 0}},
+    {"ref": "R2", "symbol": "Device:R", "footprint": "Resistor_SMD:R_2512_6332Metric", "value": "10k 1W", "lcsc": "C25718", "fields": {"Power": "1W", "Voltage": "200V"}, "group": "mains", "place": {"x": 16.2, "y": 25.3, "rot": 0}},
+    {"ref": "D3", "part": "1N4148W", "group": "mains", "place": {"x": 21.4, "y": 25.95, "rot": 270}},
+    {"ref": "R14", "part": "R0603", "value": "15k", "group": "mains", "place": {"x": 21.2, "y": 30.2, "rot": 90}},
+    {"ref": "U3", "part": "LTV-817S", "mpn": "LTV-817S-TA1-C", "group": "mains", "place": {"x": 29.13, "y": 25.95, "rot": 0}},
+
+    {"ref": "J2", "part": "USB-C-16P", "group": "usb", "place": {"x": 41.5, "y": 34.35, "rot": 0}},
+    {"ref": "R3", "part": "R0603", "value": "5.1k", "group": "usb", "place": {"near": "J2.CC1"}},
+    {"ref": "R4", "part": "R0603", "value": "5.1k", "group": "usb", "place": {"near": "J2.CC2"}},
+    {"ref": "U1", "part": "USBLC6-2SC6", "group": "usb", "place": {"near": "J2"}},
+    {"ref": "D4", "part": "SCHOTTKY_SOD123", "group": "usb", "place": {"near": "J2.VBUS"}},
+
+    {"ref": "D1", "part": "SCHOTTKY_SOD123", "group": "power", "place": {"near": "PS1.4", "away_from": {"J2": 4}}},
+    {"ref": "C14", "part": "C1206", "value": "22uF", "group": "power", "place": {"near": "D1"}},
+
+    {"ref": "U2", "symbol": "RF_Module:ESP32-C6-MINI-1", "footprint": "smoke_bridge:ESP32-C6-MINI-1U", "value": "ESP32-C6-MINI-1U-H4", "lcsc": "C20627095", "current_ma": 150, "group": "mcu", "place": {"x": 56.28, "y": 29.6, "rot": 270}},
+    {"ref": "C10", "part": "C1206", "value": "22uF", "group": "mcu", "place": {"near": "U2.3V3"}},
+    {"ref": "C11", "part": "C0402", "value": "100nF", "group": "mcu", "place": {"near": "U2.3V3"}},
+    {"ref": "R10", "part": "R0402", "value": "10k", "group": "mcu", "place": {"near": "U2.EN"}},
+    {"ref": "C12", "part": "C0402", "value": "1uF", "group": "mcu", "place": {"near": "U2.EN"}},
+    {"ref": "R11", "part": "R0402", "value": "10k", "group": "mcu", "place": {"x": 48.6, "y": 33.6, "rot": 0}},
+    {"ref": "R12", "part": "R0402", "value": "10k", "group": "mcu", "place": {"x": 48.6, "y": 32.6, "rot": 0}},
+    {"ref": "SW1", "part": "BUTTON_SMALL", "value": "BOOT", "lcsc": "C221895", "mpn": "PTS810SJG250SMTRLFS", "group": "mcu"},
+    {"ref": "R13", "part": "R0402", "value": "47k", "group": "sense", "place": {"near": "U3.4"}},
+    {"ref": "C13", "part": "C0402", "value": "10nF", "group": "sense", "place": {"near": "U3.4"}}
+  ],
+  "nets": {
+    "AC_L": "J1.1 F1.1",
+    "AC_LF": "F1.2 RV1.2 PS1.1",
+    "AC_N": "J1.2 RV1.1 PS1.2 R2.1",
+    "IC_IN": "J1.3 R1.1",
+    "OPTO_A": "R1.2 U3.1 D3.1 R14.1",
+    "OPTO_K": "R2.2 U3.2 D3.2 R14.2",
+    "HLK_5V": "PS1.4 D1.2",
+    "VBUS_IN": "J2.VBUS U1.5 D4.2",
+    "+5V": "D1.1 C14.1 D4.1",
+    "GND": "PS1.3 C14.2 U3.3 C13.2 U2.GND C10.2 C11.2 C12.2 SW1.2 J2.GND J2.SHIELD R3.2 R4.2 U1.2",
+    "CC1": "J2.CC1 R3.1",
+    "CC2": "J2.CC2 R4.1",
+    "+3V3": "U2.3V3 C10.1 C11.1 R10.1 R11.1 R12.1 R13.1",
+    "EN": "U2.EN R10.2 C12.1",
+    "BOOT": "U2.IO9 R11.2 SW1.1",
+    "IO8_PU": "U2.IO8 R12.2",
+    "ALARM": "U3.4 R13.2 C13.1 U2.IO2",
+    "LED_STAT": "U2.IO3",
+    "USB_DP": "U2.IO13 J2.D+ U1.1 U1.6",
+    "USB_DN": "U2.IO12 J2.D- U1.3 U1.4"
+  },
+  "no_connect": "J2.SBU1 J2.SBU2 U2.IO0 U2.IO1 U2.IO4 U2.IO5 U2.IO6 U2.IO7 U2.IO14 U2.IO15 U2.IO18 U2.IO19 U2.IO20 U2.IO21 U2.IO22 U2.IO23 U2.RXD0 U2.TXD0"
+}

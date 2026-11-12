@@ -1,0 +1,12 @@
+{
+ "format": "jlcpcb",
+ "files": [
+  "fab/smoke_bridge-gerbers.zip",
+  "fab/smoke_bridge-bom.csv",
+  "fab/smoke_bridge-cpl.csv",
+  "fab/smoke_bridge.step"
+ ],
+ "missing_lcsc": [],
+ "stock_issues": [],
+ "parity_issues": 0
+}
